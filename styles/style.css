@@ -1,0 +1,31 @@
+/* Import Police*/
+@font-face {
+  font-family: "RedHatDisplay";
+  src: url("/assets/fonts/RedHatDisplay-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Rexlia";
+  src: url("/assets/fonts/rexlia\ rg.ttf") format("truetype");
+}
+
+/*CSS Global*/
+*,
+::after,
+::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+
+h1 {
+	font-family: "Rexlia";
+	color: red;
+}
