@@ -45,13 +45,12 @@ h1 {
 li {
   list-style-type: none;
 }
-main {
-  padding: 1rem;
-	background: #000;
+main {  
 	color: #fff;
 }
 section {
   padding-bottom: 3rem;
+	padding: 1rem;
 }
 
 /*? Gestion comportement au scroll, switch vertical entre les section*/
@@ -98,7 +97,6 @@ header::before {
   font-size: calc(1rem + 3.5vw);
   margin-bottom: 1rem;
 }
-
 .header-text p {
   color: var(--color-two);
   font-weight: 800;
@@ -125,7 +123,6 @@ header::before {
 	width: 100%;
 	height: 4px;
 }
-
 nav {
   position: fixed;
   width: 100%;
@@ -175,8 +172,8 @@ img {
 /*? CSS par ordre d'apparition*/
 
 /*? Block About Section*/
-#about_section {
-	padding: 1rem 0;	
+#about_section {	
+	background: #111;	
 }
 #about_section figure{
 	margin: 1rem 0;	
@@ -216,9 +213,22 @@ img {
 	margin: auto;
 }
 
-/*? Block team scetion*/
+/*? Block team section*/
 #team_section{
-	padding: 1rem 0;
+	position: relative;
+}
+#team_section::before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(/assets/images/background_teams_section_mobile.jpg);
+	background-size: cover;
+	background-position: center;
+	filter: brightness(0.25);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -99;
 }
 #team_section h1{
 	font-size: calc(1.2rem + 2vw);
@@ -236,15 +246,13 @@ img {
 	font-weight: 900;
 	margin-left: 1rem;
 	padding-top: 1rem;
-
 }
 #team_section span {
-	color: var(--color-two);
 	font-weight: 700;
 	margin-left: 1rem;	
 }
 .card-member figure {	
-	background: rgb(64, 37, 187);
+	background: rgb(45, 22, 146);
 	border-radius: 10px 10px 0 0;
 	text-align: center;
 	height: 80%;
@@ -269,4 +277,56 @@ img {
 .card-member{		
 	scroll-snap-align: start;
 	height: 70vh;	
+	background: #111;
+}
+
+/*? Block live_section*/
+#live_section {
+	height: 100vh;
+	max-height: 100vh;	
+	overflow-y: scroll;
+	position: relative;
+	background: #111
+}
+#live_section h1{
+	font-size: calc(1.2rem + 2vw);
+	color: var(--color-two);
+	text-align: end;
+}
+#live_section h1 span {
+	display: block;
+	font-size: calc(0.4rem + 4vw);	
+	color: var(--color-one);	
+	text-align: start;			
+}
+.live-container {	
+	margin-top: 1rem;
+	height: 75vh;
+	overflow-y: scroll;
+}
+.card-live{	
+	margin-bottom: 1rem;
+	border:1px solid var(--color-two);
+	position: relative;
+}
+.card-live figcaption{
+	color: var(--color-one);
+	font-family: var(--font-title);
+	text-align: center;
+	margin-bottom: 5px;
+}
+.game-label{
+	background: rgb(45, 22, 146);
+	border:1px solid var(--color-two);
+	border-radius: 5px;
+	padding: 5px;
+	font-size: calc(0.4rem + 1vw);
+	font-weight: 800;
+	font-family: var(--font-title);
+	letter-spacing: 1.2px;	
+}
+.bar-label {
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
